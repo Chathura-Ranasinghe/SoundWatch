@@ -1,7 +1,8 @@
 import React from 'react'
 
-export default function Transcribing() {
+export default function Transcribing(props) {
     const { downloading } = props
+
 
     return (
         <div className='flex items-center flex-1 flex-col justify-center gap-10 md:gap-14 text-center pb-24 p-4'>
