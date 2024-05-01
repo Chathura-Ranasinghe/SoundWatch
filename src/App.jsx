@@ -1,9 +1,9 @@
 import { useState, useRef, useEffect } from 'react'
 import HomePage from './components/HomePage'
 import Header from './components/Header'
-import FileDisplay from './components/FileDisplay'
 import Information from './components/Information'
 import Transcribing from './components/Transcribing'
+import FileDisplay from './components/FileDisplay'
 import { MessageTypes } from './utils/presets'
 
 function App() {
