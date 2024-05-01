@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 import HomePage from './components/HomePage'
 import Header from './components/Header'
-import FileDisplay from './components/FIleDisplay'
+import FileDisplay from './components/FileDisplay'
 import Information from './components/Information'
 import Transcribing from './components/Transcribing'
 import { MessageTypes } from './utils/presets'
@@ -29,7 +29,7 @@ function App() {
         type: 'module'
       })
     }
-  
+
     const onMessageReceived = async (e) => {
       switch (e.data.type) {
         case 'DOWNLOADING':
@@ -50,9 +50,9 @@ function App() {
           break;
       }
     }
-  
+
     worker.current.addEventListener('message', onMessageReceived)
-  
+
     return () => worker.current.removeEventListener('message', onMessageReceived)
   })
 
@@ -81,11 +81,11 @@ function App() {
   return (
     <div className='flex flex-col max-w-[1000px] mx-auto w-full'>
       <section className='min-h-screen flex flex-col'>
-        <Header/>
+        <Header />
         {output ? (
-          <Information/>
+          <Information output={output} finished={finished}/>
         ) : loading ? (
-          <Transcribing/>
+          <Transcribing />
         ) : isAudioAvailable ? (
           <FileDisplay handleFormSubmission={handleFormSubmission} handleAudioReset={handleAudioReset} file={file} audioStream={audioStream} />
         ) : (

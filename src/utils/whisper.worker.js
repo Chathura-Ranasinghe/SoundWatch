@@ -1,7 +1,6 @@
 import { pipeline } from '@xenova/transformers'
 import { MessageTypes } from './presets'
 
-// gg
 class MyTranscriptionPipeline {
     static task = 'automatic-speech-recognition'
     static model = 'openai/whisper-tiny.en'
@@ -166,3 +165,4 @@ function createPartialResultMessage(result) {
         result
     })
 }
+
