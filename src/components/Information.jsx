@@ -83,8 +83,8 @@ export default function Information(props) {
                 <button onClick={() => setTab('transcription')} className={'px-4 rounded duration-200 py-1 ' + (tab === 'transcription' ? ' bg-blue-300 text-white' : ' text-blue-400 hover:text-blue-600')}>Transcription</button>
                 <button onClick={() => setTab('translation')} className={'px-4 rounded duration-200 py-1  ' + (tab === 'translation' ? ' bg-blue-300 text-white' : ' text-blue-400 hover:text-blue-600')}>Translation</button>
             </div>
-            <div className='my-8 flex flex-col-reverse max-w-prose w-full mx-auto gap-4'>
-                {(!finished || translating) && (
+            <div className='my-8 flex flex-col-reverse justify-center max-w-prose w-full mx-auto gap-4 h-64 border-dashed border-2 border-sky-500 rounded-lg'>
+                {(!finished || translating) && tab === 'translation' && (
                     <div className='grid place-items-center'>
                         <i className="fa-solid fa-spinner animate-spin"></i>
                     </div>
