@@ -77,22 +77,22 @@ export default function Information(props) {
         <h1 className='font-semibold text-4xl sm:text-5xl md:text-6xl'>Your <span className='text-blue-400 bold'>Transcription</span></h1>
 
             <div className='grid grid-cols-2 sm:mx-auto bg-white  rounded overflow-hidden items-center p-1 blueShadow border-[2px] border-solid border-blue-300'>
-                <button onClick={() => setTab('transcription')} className={'px-4 rounded duration-200 py-1 ' + (tab === 'transcription' ? ' bg-blue-300 text-white' : ' text-blue-400 hover:text-blue-600')}>Transcription</button>
-                <button onClick={() => setTab('translation')} className={'px-4 rounded duration-200 py-1  ' + (tab === 'translation' ? ' bg-blue-300 text-white' : ' text-blue-400 hover:text-blue-600')}>Translation</button>
+                <button onClick={() => setTab('transcription')} className={'px-4 rounded duration-200 py-1 ' + (tab === 'transcription' ? ' bg-blue-300 text-white' : 'text-blue-400 hover:text-blue-600')}>Transcription</button>
+                <button onClick={() => setTab('translation')} className={'px-4 rounded duration-200 py-1  ' + (tab === 'translation' ? ' bg-blue-300 text-white' : 'text-blue-400 hover:text-blue-600')}>Translation</button>
             </div>
-            <div className='my-8'>
+            <div className='mt-8'>
                 {tab === 'transcription' ? (
                     <Transcription {...props} textElement={textElement} />
                 ) : (
                     <Translation {...props} toLanguage={toLanguage} translating={translating} textElement={textElement} setTranslating={setTranslating} setTranslation={setTranslation} setToLanguage={setToLanguage} generateTranslation={generateTranslation} />
                 )}
             </div>
-            <div className='flex items-center gap-4 mx-auto '>
+            <div className='flex items-center justify-between gap-4 mx-auto '>
                 <button onClick={handleCopy} title="Copy" className='bg-white  hover:text-blue-500 duration-200 text-blue-300 px-2 aspect-square grid place-items-center rounded'>
                     <i className="fa-solid fa-copy"></i>
                 </button>
                 <button onClick={handleDownload} title="Download" className='bg-white  hover:text-blue-500 duration-200 text-blue-300 px-2 aspect-square grid place-items-center rounded'>
-                    <i className="fa-solid fa-download"></i>
+                    <i className="fa-solid fa-cloud-arrow-down"></i>
                 </button>
             </div>
         </main>

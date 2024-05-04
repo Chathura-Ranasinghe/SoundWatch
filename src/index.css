@@ -13,6 +13,14 @@ h3,
   font-family: 'Poppins', sans-serif;
 }
 
+body {
+  background-color: var(--body-color);
+  background-image: radial-gradient(#474952 0.5px, #edf0fb 0.5px);
+  background-size: 10px 10px;
+  -ms-overflow-style: none;  
+  overflow-x: hidden !important;
+}
+
 .blueShadow {
   box-shadow: 3px 3px 0 0 #93c5fd;
 }

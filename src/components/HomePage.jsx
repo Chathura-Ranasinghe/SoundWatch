@@ -65,7 +65,7 @@ export default function HomePage(props) {
     })
 
   return (
-    <main className='flex-1  p-4 flex flex-col gap-3 text-center sm:gap-4 justify-center pb-20'>
+    <main className='flex-1 p-4 flex flex-col gap-3 text-center sm:gap-4 justify-center pb-20'>
         <h1 className='font-semibold text-5xl sm:text-6xl md:text-7xl'>Sound<span className='text-blue-400 bold'>Watch</span></h1>
         <h3 className='font-medium md:text-lg'>Record 
         <span className='text-blue-400 p-2'><i className="fa-solid fa-forward"></i></span>Transcribe 
@@ -80,7 +80,7 @@ export default function HomePage(props) {
               (recordingStatus === 'recording' ? ' text-rose-300' : "")}></i>
             </div>
         </button>
-        <p className='text-base'>Or <label className='text-blue-400 cursor-pointer hover:text-blue-600 duration-200'>upload <input onChange={(e) => {
+        <p className='text-base'>Or <label className='text-blue-400 cursor-pointer hover:text-blue-500 font-medium duration-200'>upload <input onChange={(e) => {
             const tempFile = e.target.files[0]
             setFile(tempFile)
         }} className='hidden' type='file' accept='.mp3,.wave' /></label> a mp3 file</p>

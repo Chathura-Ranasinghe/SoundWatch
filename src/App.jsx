@@ -5,6 +5,7 @@ import Information from './components/Information'
 import Transcribing from './components/Transcribing'
 import FileDisplay from './components/FileDisplay'
 import { MessageTypes } from './utils/presets'
+import Footer from './components/Footer'
 
 function App() {
   const [file, setFile] = useState(null)
@@ -92,7 +93,9 @@ function App() {
           <HomePage setFile={setFile} setAudioStream={setAudioStream} />
         )}
       </section>
-      <footer></footer>
+      <footer>
+        <Footer/>
+      </footer>
     </div>
   )
 }
